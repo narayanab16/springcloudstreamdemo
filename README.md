@@ -1,5 +1,5 @@
-# springcloudstreamdemo
-Spring Cloud Stream Demo
+# Spring Cloud Stream Demo
+# Kafka Producer, and Consumer Apps
 
 -    Prereq: Docker, DockerCompose, IntelliJ, Java 8+, Here i use JDK 18/20 
 -    And or Any Local kafka broker running
