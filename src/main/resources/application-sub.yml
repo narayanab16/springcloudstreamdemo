@@ -11,10 +11,11 @@ spring:
       bindings:
         receive-in-0:
           destination: dataIn4
-          binder: kafka1
+          group: cg1
           consumer:
             maxAttempts: 1
             resetOffsets: true
+          binder: kafka1
       binders:
           kafka1:
             type: kafka
