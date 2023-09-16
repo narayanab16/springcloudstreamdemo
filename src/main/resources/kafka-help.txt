@@ -1,0 +1,13 @@
+docker exec --interactive --tty broker \
+kafka-topics --create --topic dataIn4 \
+--bootstrap-server broker:9092
+
+docker exec --interactive --tty broker \
+kafka-topics --alter --partitions 2 --topic dataIn4 \
+--bootstrap-server broker:9092
+
+docker exec --interactive --tty broker \
+kafka-topics --describe --topic dataIn4 \
+--bootstrap-server broker:9092
+
+docker exec -it broker bash

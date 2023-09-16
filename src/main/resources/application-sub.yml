@@ -1,0 +1,31 @@
+debug: false
+spring.application.name: sub-demo-app
+logging.level.root: INFO
+server:
+  port: 10001
+spring:
+  cloud:
+    stream:
+      function:
+        definition: receive
+      bindings:
+        receive-in-0:
+          destination: dataIn4
+          binder: kafka1
+          consumer:
+            maxAttempts: 1
+            resetOffsets: true
+      binders:
+          kafka1:
+            type: kafka
+            environment:
+              spring:
+                cloud:
+                  stream:
+                    kafka:
+                      binder:
+                        brokers: ${kafka.brokers}
+                        zkNodes: ${zk1}
+
+kafka.brokers: localhost:9092
+zk1: localhost:2181
