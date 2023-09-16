@@ -7,3 +7,4 @@ Spring Cloud Stream Demo
     [admin@fedora37 ~]$ docker-compose -f confluent-kafka.yml up 
 -     Create a topic (see under resources/kafka-help.txt)
 -     See Producer and Consumer apps start
+-     Kill consumer and restart consumer still u get previous missed data[Exactly once achieved]
